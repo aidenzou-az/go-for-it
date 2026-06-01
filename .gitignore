@@ -1,0 +1,11 @@
+# yxg local runtime artifacts
+.yxg/STATE.md
+.yxg/INDEX.md
+.yxg/LOG.md
+.yxg/logs/
+.yxg/templates/
+
+# dependency and test noise
+node_modules/
+coverage/
+.DS_Store

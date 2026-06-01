@@ -1,0 +1,20 @@
+{
+  "name": "yxg-local",
+  "interface": {
+    "displayName": "yxg Local Plugins"
+  },
+  "plugins": [
+    {
+      "name": "yxg",
+      "source": {
+        "source": "local",
+        "path": "./plugins/yxg"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "name": "yxg-framework",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "bin": {
+    "yxg": "./bin/yxg.js"
+  },
+  "scripts": {
+    "cli": "node ./bin/yxg.js",
+    "install:codex-adapter": "node ./scripts/install-codex-adapter.js",
+    "verify:codex-adapter": "node ./scripts/verify-codex-adapter.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

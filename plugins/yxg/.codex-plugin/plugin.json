@@ -1,0 +1,30 @@
+{
+  "name": "yxg",
+  "version": "0.1.1",
+  "description": "Codex adapter for the yxg repository-local workflow kernel.",
+  "license": "UNLICENSED",
+  "keywords": [
+    "codex",
+    "workflow",
+    "yxg"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "yxg",
+    "shortDescription": "Intent-level Codex skills for yxg workflow",
+    "longDescription": "Provides user-facing Codex skills such as /yxg:plan, /yxg:do, /yxg:monitor, /yxg:finish, /yxg:resume, and /yxg:cancel while keeping .yxg as the source of truth.",
+    "developerName": "Local",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "/yxg:plan",
+      "/yxg:do",
+      "/yxg:monitor",
+      "/yxg:resume"
+    ],
+    "brandColor": "#0F766E"
+  }
+}
