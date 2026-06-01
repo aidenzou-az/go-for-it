@@ -8,7 +8,7 @@ Reusable repo-local workflow kernel for AI-assisted software development.
 
 - A `.yxg/` project memory model with work units, reviews, baseline knowledge, and local runtime state.
 - A `yxg` CLI for `init`, `import`, `plan`, `execute`, `review`, `resume`, `cleanup`, and validation flows.
-- Codex intent skills such as `$yxg:yxg-import`, `$yxg:yxg-plan`, `$yxg:yxg-do`, and `$yxg:yxg-finish`.
+- Codex intent skills such as `$yxg:yxg-import`, `$yxg:yxg-plan`, `$yxg:yxg-do`, `$yxg:yxg-monitor`, and `$yxg:yxg-finish`.
 - Git observe/suggest behavior that reports branch mismatch and dirty-worktree risk without implicitly running git writes.
 - Import support for understanding existing repositories before planning new work.
 
@@ -61,10 +61,13 @@ Then manually enable or refresh the local `yxg` plugin inside Codex for that tar
 $yxg:yxg-import
 $yxg:yxg-plan 增加一个具体功能
 $yxg:yxg-do
+$yxg:yxg-monitor
 $yxg:yxg-finish
 ```
 
 `yxg-do` continues the current recommended work. If there is no active work but `.yxg/ROADMAP.md` names a planned next work, the Codex skill should use that roadmap item as the next intended task without asking the user to run low-level ready commands.
+
+Use `$yxg:yxg-monitor` when implementation is complete enough to observe, but the work still needs external evidence before review. Typical examples include soak tests, scheduled data collection, production observation windows, or acceptance checks that need time to run. Monitoring work remains open for evidence collection, but it should not block `$yxg:yxg-do` from continuing the next actionable work when one exists.
 
 ## Key Docs
 
